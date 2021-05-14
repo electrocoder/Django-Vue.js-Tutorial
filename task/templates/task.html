@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+    {% block content%}
+
+    {% verbatim %}
+
+    <div id="app">
+
+        <form @submit.prevent="createTask">
+
+            <label for="">create new</label>
+            <input type="text" v-model="task">
+            <button>create</button>
+
+        </form>
+
+        <div v-for="task in tasks">
+            {{ task.title }}
+            <button type="button">X</button>
+        </div>
+
+    </div>
+
+    {% endverbatim %}
+
+    {% endblock %}
+
